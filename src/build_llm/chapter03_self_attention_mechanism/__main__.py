@@ -2,11 +2,11 @@ import sys
 
 import torch
 
-from build_llm.self_attention_mechanism.naive_attention import (
+from .naive_attention import (
     calc_context_vec_for_one_token,
     calc_whole_context_vecs,
 )
-from build_llm.self_attention_mechanism.self_attention import (
+from .self_attention import (
     CausalAttention,
     MultiHeadAttention,
     MultiHeadAttentionWrapper,

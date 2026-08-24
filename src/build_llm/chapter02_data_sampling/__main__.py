@@ -2,7 +2,10 @@ import sys
 
 import tiktoken
 
-from build_llm.data_sampling.embedding import position_embedding, token_embedding
+from .embedding import (
+    position_embedding,
+    token_embedding,
+)
 
 
 def main():
