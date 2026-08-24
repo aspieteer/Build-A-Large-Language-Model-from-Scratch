@@ -1,0 +1,27 @@
+[project]
+name = "build-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "aspieteer", email = "intxoild@outlook.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "tiktoken>=0.13.0",
+    "torch>=2.13.0",
+    "torchvision>=0.28.0",
+]
+
+[project.scripts]
+build-llm = "build_llm:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true # Forces uv to install the root project to sys.path in editable mode
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = [".venv"]
