@@ -75,7 +75,6 @@ class CausalAttention(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         batch, num_tokens, dim_in = x.shape
-        assert num_tokens == self.context_length
         queries = self.W_query(x)
         keys = self.W_key(x)
         values = self.W_value(x)
@@ -149,7 +148,6 @@ class MultiHeadAttention(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         batch, num_tokens, dim_in = x.shape
-        assert num_tokens == self.context_length
 
         queries = self.W_query(x)
         keys = self.W_key(x)
