@@ -1,7 +1,6 @@
 import torch
 from torch import nn
 
-from build_llm.chapter04_llm_architecture.config import GPT_CONFIG_124M
 from build_llm.chapter04_llm_architecture.layer_norm import LayerNorm
 from build_llm.chapter04_llm_architecture.transformer_block import TransformerBlock
 
