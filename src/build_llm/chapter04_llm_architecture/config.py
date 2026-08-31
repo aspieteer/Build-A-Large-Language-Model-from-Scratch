@@ -11,7 +11,7 @@ GPT_CONFIG_124M = {
 }
 
 GPT_CONFIG_124M_SHORTEN = {
-    "vocab_size": 50257,  # Vocabulary size
+    "vocab_size": 65536,  # Vocabulary size, specified for MPS not broken when the vocab_size is not power-of-two and larger than 2^14 I guess.
     "context_length": 256,  # Context length
     "emb_dim": 768,  # Embedding dimension
     "n_heads": 12,  # Number of attention heads
